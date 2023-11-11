@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Reader</title>
+    <link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            max-width: 700px;
+            min-height: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-sizing:border-box;
+           box-shadow: 0px 10px 20px 5px rgba(160, 248, 248, 0.7);
+            /* box-shadow: 0px 10px 20px 2px rgba(8, 7, 7, 0.1); */
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        button {
+            /* display: none; */
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            /* justify-content: flex-start; */
+            /* cursor: pointer; */
+            /* float: inline-end; */
+
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+        #text{
+            font-size: 20px;
+            line-height: 2.5;
+            min-height: 100%;
+            min-width: 100%;
+            border: 0px solid;
+            font-family: 'Mukta';
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- STORY TITLE -->
+        <h1>Hidden Room</h1>
+    </header>
+    <main>
+       <nav> <h1>Brave group of Friends</h1></nav>
+        <div id="text"></div>
+        <!-- <footer><button id="next-button">Next Chapter</button></footer> -->
+    </main>
+
+    <script>
+       
+        
+        const textElement = document.getElementById("text");
+        const text = `Deep in the heart of a dense forest, there stood an abandoned mansion. Locals whispered of its haunted past, claiming that anyone who entered would never be seen again.
+
+One brave group of friends decided to test the legends and explore the mansion. Armed with flashlights and nerves of steel, they stepped through the creaking front door, their hearts pounding with anticipation.
+
+As they ventured deeper into the mansion, they encountered eerie sights and unexplained phenomena. Shadows danced on the walls, and whispers echoed through the empty halls. But they pressed on, determined to uncover the truth.
+
+In one room, they discovered a dusty old diary, its pages filled with cryptic entries. It spoke of a tragic love story that had unfolded within the mansion’s walls, involving a forbidden romance and a mysterious disappearance.
+
+Driven by curiosity, the friends delved further into the mansion’s history. They discovered hidden passageways, secret compartments, and a hidden room that held a collection of old photographs.
+
+Each photograph revealed a different person, frozen in time. The friends realized that these were the lost souls who had vanished within the mansion. They were trapped, unable to move on.
+
+With newfound empathy, the friends embarked on a mission to set the trapped spirits free. They unraveled the pieces of the tragic love story, piecing together the events that had led to the mansion’s haunting.
+
+Through their efforts, they were able to bring closure to the spirits, allowing them to find peace and move on. As they did, the mansion seemed to sigh with relief, its ghostly aura dissipating.
+
+Word spread of the friends’ courageous act, and the mansion became a symbol of hope and redemption. People from all around came to visit, not out of fear, but to pay their respects to the souls that had finally found peace.
+
+And so, the abandoned mansion transformed from a place of darkness into a beacon of light, reminding everyone that even in the face of the unknown, compassion and bravery can triumph.
+
+I hope you enjoyed this mysterious tale 🏚️🔦`;
+        let index = 0;
+
+        function type() {
+          if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, 80);
+          }
+        }
+        type();
+        // if(type()){
+       
+        // }
+    </script>
+</body>
+</html>
